@@ -135,7 +135,7 @@ combined_df["progress_gap"] = combined_df["min_progress"] - combined_df["progres
 ```python
 low_progress_df = FilterDataFrame(
     table=combined_df,
-    filter_condition='progress < 50'
+    filter_condition='progress_gap < 50'
 )
 ```
 
