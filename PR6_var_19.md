@@ -130,7 +130,7 @@ combined_df = JoinDataFrames(
 combined_df["progress_gap"] = combined_df["min_progress"] - combined_df["progress"]
 ```
 
-5. **Выбрать студентов с прогрессом < 50%:**
+5. **Выбрать студентов с `combined_df["progress_gap"]` < 50:**
 
 ```python
 low_progress_df = FilterDataFrame(
