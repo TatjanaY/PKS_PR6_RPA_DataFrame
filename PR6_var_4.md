@@ -125,12 +125,12 @@ combined_df = JoinDataFrames(
 combined_df["remaining_amount"] = combined_df["amount"] - combined_df["payment_amount"]
 ```
 
-5. **Выбрать заказы с задолженностью > 0:**
+5. **Выбрать заказы с задолженностью >= 1:**
 
 ```python
 unpaid_df = FilterDataFrame(
     table=combined_df,
-    filter_condition='remaining_amount > 0'
+    filter_condition='remaining_amount >= 1'
 )
 ```
 
