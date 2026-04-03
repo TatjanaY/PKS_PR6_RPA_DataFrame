@@ -126,12 +126,12 @@ combined_df = JoinDataFrames(
 combined_df["remaining_amount"] = combined_df["amount"] - combined_df["payment_amount"]
 ```
 
-5. **Выбрать заказы с неполной оплатой:**
+5. **Выбрать заказы с невысокой стоимостью:**
 
 ```python
 underpaid_df = FilterDataFrame(
     table=combined_df,
-    filter_condition='payment_amount < amount'
+    filter_condition='payment_amount <= 40000'
 )
 ```
 
