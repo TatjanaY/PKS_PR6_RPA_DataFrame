@@ -128,12 +128,12 @@ combined_df = JoinDataFrames(
 combined_df["urgency_level"] = combined_df["quantity"] * (7 - combined_df["days_remaining"])
 ```
 
-5. **Выбрать товары с остатком > 0:**
+5. **Выбрать товары с остатком > 30:**
 
 ```python
 available_expiring_df = FilterDataFrame(
     table=combined_df,
-    filter_condition='quantity > 0'
+    filter_condition='quantity > 30'
 )
 ```
 
